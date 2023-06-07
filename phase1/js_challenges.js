@@ -81,4 +81,46 @@ let fizzBuzz = function (n) {
     }
 }
 
-fizzBuzz(3);
+
+// create a function that returns a integer in reverse javascript
+// 5683 ---> 3865
+function reverseInt(int) {
+    const test = int.toString().split('').reverse().join('')
+    const realNumber = parseInt(test)
+    console.log(typeof realNumber);
+    return realNumber
+}
+reverseInt(5683)
+
+// filter out even number
+const arr1 = [1, 3, 5, 8, 9] 
+const filtered = arr1.filter(num => num % 2 === 1)
+
+console.log(filtered)
+
+function capitalizeLetters(str) {
+    const capitalized = str.toLowerCase().split(' ')
+    for (i = 0; i < capitalized.length; i++) {
+        capitalized[i] = capitalized[i].charAt(0).toUpperCase() + capitalized[i].substring(1);
+    }
+    return capitalized.join(' ')
+}
+// capitalizeLetters('i love javascript') ---> ['i', 'love', 'javascript']
+
+// Return the longest word of a string
+
+//for loop that iterates through each word
+//compare the length of each word -> if()
+//return the longest word
+
+function longestWord(string) {
+    const arrayWords = string.split(' ')
+    let longestWord = ''
+    for(let i = 0; i < arrayWords.length; i++) {
+       if(arrayWords[i].length > longestWord.length) {
+         longestWord = arrayWords[i]
+       }
+    }
+    console.log(longestWord)
+}
+longestWord('This is a really lonnnnnnng string')
